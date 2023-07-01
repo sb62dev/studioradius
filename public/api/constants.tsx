@@ -1,2 +1,0 @@
-export const CONTENTFUL_SPACE_KEY = process.env.CONTENTFUL_SPACE_KEY;
-export const CONTENTFUL_ACCESS_TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN;

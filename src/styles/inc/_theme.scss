@@ -1,0 +1,164 @@
+@import "./components";
+:root{
+    //Global Color
+    --theme-primary: #025436;
+    --theme-white: #fff;
+    --heading-font: 'avenir-semibold', sans-serif;
+    --body-font: 'avenir-regular', sans-serif;
+    --dark-grey: $darkGrey;
+    --body-line-height: 1.6rem;
+    
+
+    //Top header bar start
+    --top-header-bg: #F4F4F4;
+    --top-nav-font-family: 'avenir-regular', sans-serif;
+    --top-nav-font-size: 14px;
+
+    --top-nav-lang-font-family:'avenir-regular', sans-serif;
+    --top-nav-lang-font-size: 16px;
+    --top-nav-lang-active-bg: $darkGrey;
+    --top-nav-lang-active-color: #fff;
+    --top-nav-border-line: #D7D2C8;
+
+    @include media-breakpoint-down(xxl) {
+        --top-nav-font-size: 12px;
+    }
+    @include media-breakpoint-down(xxl) {
+        --top-nav-lang-font-size: 14px;
+    }
+
+    //Site header start
+    --header-bg: #fff;
+
+    --header-menu-color: $darkGrey;
+    --header-font-size: 16px;
+    @include media-breakpoint-down(xxl) {
+        --header-font-size: 15px;
+    }
+    @include media-breakpoint-down(xl) {
+        --header-font-size: 14px;
+    }
+    --header-menu-toggleArrow: $darkGrey;
+    --header-menu-toggleArrow-font-Size: 20px;
+    @include media-breakpoint-down(xs) {
+    --header-menu-toggleArrow-font-Size: 16px;
+    }
+
+    --header-hover-menu-bg: #f4f4f4;
+    --header-hover-menu-onHover-bg: #dddddd;
+    --header-hover-menu-bottom-boredr: #D7D2C8;
+    --header-menu-toggleBar-color: #025436;
+    --header-toggleBar-divider: #F1EDE6;
+    --header-menu-mobile-bg: #f4f4f4;
+    --header-mobile-closeIcon-color: #025436;
+   
+
+    --header-search-icon-color:#025436;
+
+    --header-menu-child-font-size: 16px;  
+
+    //Slider
+     --slider-info-bg: var(--theme-primary);
+
+     --slider-heading-font-size: 64px;
+     --slider-heading-line-height: 1.25;
+     @include media-breakpoint-down(xxxl) {
+     --slider-heading-font-size: 62px;
+     } 
+     @include media-breakpoint-down(xxl) {
+     --slider-heading-font-size: 52px;
+     }
+     @include media-breakpoint-between(lg, xl) {
+     --slider-heading-font-size: 38px;
+     }
+     @include media-breakpoint-between(md, lg) {
+     --slider-heading-font-size: 34px;
+     }
+     @include media-breakpoint-down(md) {
+     --slider-heading-font-size: 48px;
+     }
+     @include media-breakpoint-down(sm) {
+     --slider-heading-font-size: 39px;
+     }
+
+     --slider-content-color: var(--theme-white);
+     --slider-content-font-size: 16px;
+     @include media-breakpoint-down(xxxl) {
+        --slider-content-font-size: 14px;
+     }
+     @include media-breakpoint-between(lg, xl) {
+        --slider-content-font-size: 12px;
+    }
+    @include media-breakpoint-between(md, lg) {
+    --slider-content-font-size: 11px;
+    }
+    @include media-breakpoint-down(md) {
+    --slider-content-font-size: 16px;
+    }
+    @include media-breakpoint-down(sm) {
+    --slider-content-font-size: 13px;
+    } 
+     --slider-heading-font-family: var(--heading-font);
+     --slider-heading-color: var(--theme-white);
+
+    //Footer
+    --footer-bg: #025436;
+    --footer-heading-font-family: 'avenir-regular', sans-serif;
+    --footer-heading-font-size: 18px;
+    --footer-heading-line-height: 22px;
+    --footer-heading-color:#fff;
+    --footer-heading-border-bottom-color:#48A548;
+    --fb-btn-bg: #fff;
+    --fb-btn-border-color: #fff;
+    --fb-font-size:16px;
+    @include media-breakpoint-down(xxl) {
+        --footer-menu-font-size: 14px;
+    }
+    @include media-breakpoint-down(md) {
+        --footer-menu-font-size: 16px;
+    }
+    @include media-breakpoint-down(xs) {
+        --footer-menu-font-size: 14px;
+    }
+    --footer-menu-link-color: #fff;
+    --footer-menu-font-size: 16px;
+    @include media-breakpoint-down(xxl) {
+    --footer-menu-font-size: 14px;
+    }
+    @include media-breakpoint-down(xl) {
+    --footer-menu-font-size: 13px;
+    }
+    @include media-breakpoint-down(md) {
+    --footer-menu-font-size: 16px;
+    }
+    @include media-breakpoint-down(xs) {
+    --footer-menu-font-size: 14px;
+    }
+
+    --footer-copyRight-fontFamily: 'avenir-regular', sans-serif;
+    --footer-copyRight-color: #fff;
+    --footer-copyRight-fontSize: 16px;
+
+    @include media-breakpoint-down(xxl) {
+        --footer-copyRight-fontSize: 14px;
+    }
+    @include media-breakpoint-between(md, xl) {
+    --footer-copyRight-fontSize: 13px;
+    }
+    @include media-breakpoint-down(md) {
+    --footer-copyRight-fontSize: 14px;
+    }
+    @include media-breakpoint-down(xs) {
+    --footer-copyRight-fontSize: 13px;
+    }
+
+      --footer-bottomLinks-color:#F1EDE6;
+      --footer-bottomLinks-font-size:14px;
+      @include media-breakpoint-between(md, xl) {
+      --footer-bottomLinks-font-size: 13px;
+      }
+      @include media-breakpoint-down(xs) {
+      --footer-bottomLinks-font-size: 13px;
+      }
+      --footer-bottomLinks-fontFamily: 'avenir-regular', sans-serif;
+}

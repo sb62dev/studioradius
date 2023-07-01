@@ -1,0 +1,113 @@
+@import '../../styles/inc/components';
+.largeBanner {
+    .bannerContent {
+        position: relative;
+        padding: 280px 0 160px;
+        text-align: center;
+        @include media-breakpoint-down(lgmd) {
+            padding: 220px 0 140px;
+        }
+        @include media-breakpoint-down(lg) {
+            padding: 190px 0 120px;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 120px 0 170px;
+        }
+        @include media-breakpoint-down(xs) {
+            padding: 100px 0 120px;
+        }
+    }
+}
+.smallBanner {
+    .bannerContent {
+        position: relative;
+        padding: 216px 0 120px;
+        text-align: center;
+        @include media-breakpoint-down(md) {
+            padding: 103px 0;
+        }
+    }
+}
+.bannerWrapper {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, $transparentBlack3 0%, $transparentBlack4 57.92%);
+    }
+    .bannerImg {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+    }
+    .bannerContent {
+        .bannerTitle {
+            line-height: 1.15;
+            color: $white;
+            margin-bottom: 64px;
+            text-shadow: 0px 10px 15px $transparentBlack5;
+            span {
+                color: $white;
+            }
+            @include media-breakpoint-between(md, lg) {
+                font-size: 50px;
+            }
+            @include media-breakpoint-down(md) {
+                margin-bottom: 48px;
+                line-height: 1.27;
+            }
+            @include media-breakpoint-down(xs) {
+                font-size: 35px;
+                margin-bottom: 35px;
+            }
+            @include media-breakpoint-down(xxs) {
+                font-size: 30px;
+                margin-bottom: 28px;
+            }
+        }
+        p {
+            font-size: 22px;
+            line-height: 1.45;
+            color: $white;
+            margin-bottom: 64px;
+            @include media-breakpoint-down(md) {
+                margin-bottom: 48px;
+            }
+        }
+        .cardSec {
+            margin-top: 64px;
+            max-width: 818px;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+        .bannerErrorMSg {
+            position: absolute;
+            bottom: -47px;
+            box-shadow: 0px 0px 1px $transparentBlack1, 0px 4px 8px $transparentBlack2, 0px 8px 48px $transparentBlack9;
+            background-color: $white;
+            border: 1px solid transparent;
+            margin-top: 0;
+            left: 19px;
+            right: 19px;
+            z-index: 7;
+            @include media-breakpoint-down(md) {
+                bottom: -65px;
+            }
+            @include media-breakpoint-down(xxs) {
+                bottom: -82px;
+                font-size: 13px;
+            }
+        }
+    }
+}
+.mealOptionMob {
+    margin: 48px 0 8px 0;
+    padding-bottom: 33px;
+    border-bottom: 1px solid $lightGrey;  
+}

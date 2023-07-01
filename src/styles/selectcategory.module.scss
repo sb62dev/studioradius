@@ -1,0 +1,59 @@
+@import '../styles/inc/components';
+
+.selectCatBanner {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, $transparentBlack3 0%, $transparentBlack4 57.92%);
+    }
+    .imgCol {
+        min-height: 960px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        @include media-breakpoint-down(xxl) {
+            min-height: 860px;
+        }
+        @include media-breakpoint-between(md, xl) {
+            min-height: 700px;
+        }
+        @include media-breakpoint-down(xs) {
+            min-height: 650px;
+        }
+        @include media-breakpoint-down(xxs) {
+            min-height: 530px;
+        }
+    }
+    .categoryContent {
+        padding: 300px 0;
+        position: relative;
+        @include media-breakpoint-down(xxl) {
+            padding: 250px 0;
+        }
+        @include media-breakpoint-down(xl) {
+            padding: 230px 0;
+        }
+        @include media-breakpoint-down(xs) {
+            padding: 130px 0;
+        }
+        .contentCol {
+            padding: 40px 30px;
+            background-color: $white;
+            border-radius: 10px;
+            max-width: 456px;
+            margin: 0 auto;
+            position: relative;
+            h1 {
+                margin-bottom: 30px;
+                @include media-breakpoint-down(xs) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}

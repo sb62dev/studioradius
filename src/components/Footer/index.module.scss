@@ -1,0 +1,151 @@
+@import '../../styles/inc/components';
+
+.footerWrapper {
+    padding: 60px 0 40px;
+    background-color: $offWhite;
+    @include media-breakpoint-down(md) {
+        padding: 40px 0;
+    }
+    .footerLogo {
+        text-align: center;
+        border-bottom: 1px solid $lightGrey;
+        padding-bottom: 60px;
+        margin-bottom: 40px;
+        @include media-breakpoint-down(md) {
+            padding-bottom: 48px;
+        }
+        @include media-breakpoint-down(xxs) {
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+        a {
+            display: inline-block;
+            color: $black;
+            img {
+                display: block;
+                @include media-breakpoint-down(xxs) {
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+    .footerContent {
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+        .footerNav {
+            text-align: center;
+            @include media-breakpoint-down(md) {
+                max-width: 326px;
+                margin: 0 auto;
+            }
+            ul {
+                li {
+                    display: inline-block;
+                    position: relative;
+                    padding-right: 25px;
+                    margin-right: 25px;
+                    @include media-breakpoint-between(lg, lgmd) {
+                        padding-right: 15px;
+                        margin-right: 15px;
+                    }
+                    @include media-breakpoint-between(md, lg) {
+                        padding-right: 7px;
+                        margin-right: 7px;
+                    }
+                    @include media-breakpoint-down(md) {
+                        margin-top: 20px;
+                    }
+                    @include media-breakpoint-down(xxs) {
+                        padding-right: 17px;
+                        margin-right: 17px;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        width: 1px;
+                        background-color: $lightGrey;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                        padding-right: 0;
+                        &:before {
+                            display: none;
+                        }
+                    }
+                    &:nth-child(3) {
+                        @include media-breakpoint-down(md) {
+                            padding-right: 0;
+                            margin-right: 0;
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                    a {
+                        line-height: 1.62;
+                        color: $black;
+                        @include media-breakpoint-between(md, lgmd) {
+                            font-size: 14px;
+                        }
+                        @include media-breakpoint-down(xxs) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .copyrightText {
+            line-height: 1.62;
+            @include media-breakpoint-between(md, lgmd) {
+                font-size: 14px;
+            }
+            @include media-breakpoint-down(xxs) {
+                font-size: 14px;
+            }
+        }
+        .socialLinks {
+            @include media-breakpoint-down(md) {
+                padding-top: 20px;
+            }
+            ul {
+                line-height: 1;
+                li {
+                    display: inline-block;
+                    +li {
+                        padding-left: 20px;
+                        @include media-breakpoint-between(lg, lgmd) {
+                            padding-left: 15px;
+                        }
+                        @include media-breakpoint-between(md, lg) {
+                            padding-left: 8px;
+                        }
+                    }
+                    a {
+                        display: inline-block;
+                        &:hover {
+                            img {
+                                @include transvalue(transform, scale(1.2));
+                            }
+                        }
+                        img {
+                            height: 20px;
+                            width: 20px;
+                            -o-object-fit: contain;
+                            object-fit: contain;
+                            @include transvalue(transition, all 300ms ease-in-out 0s);
+                            display: block;
+                            @include media-breakpoint-between(md, lg) {
+                                height: 18px;
+                                width: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

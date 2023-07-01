@@ -1,0 +1,113 @@
+@import "./../styles/inc/components";
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-family: var(--body-font);
+    line-height: var(--body-line-height);
+    color: var(--dark-grey);
+    text-align: left;
+    &.hidden {
+        @include media-breakpoint-down(md) {
+            overflow: hidden;
+            touch-action: none;
+            -ms-touch-action: none;
+        }
+    }
+    a {
+        text-decoration: none;
+        @include transvalue(transition, all 0.3s);
+    }
+    .slick-slide {
+        img {
+            max-width: 100%;
+        }
+        position: relative;
+    }
+}
+hr {
+    background-color: $lightGrey;
+    border: none;
+    height: 1px;
+}
+[class^="icon-"],
+[class*="icon-"] {
+    &:before {
+        width: auto !important;
+        margin: 0px !important;
+    }
+}
+.btnWrap {
+    margin-bottom: 0px;
+    .btn {
+        background-color: $orangeColor;
+        cursor: pointer;
+        border: 2px solid $orangeColor;
+        border-radius: 8px;
+        text-decoration: none;
+        line-height: normal;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        font-size: 16px;
+        display: inline-block;
+        float: none;
+        margin: 0;
+        padding: 20px 30px;
+        min-width: 168px;
+        text-align: center;
+        box-shadow: none;
+        outline: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family: $Avenir;
+        color: $white !important;
+        @include media-breakpoint-down(xxl) {
+            padding: 17px 30px;
+        }
+        @include media-breakpoint-between(md, lg) {
+            padding: 13px 8px;
+            min-width: 120px;
+            font-size: 12px;
+        }
+        @include media-breakpoint-down(xxs) {
+            padding: 14px 9px;
+            min-width: 150px;
+        }
+        &::before {
+            background: $white;
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            @include transvalue(transform, translateX(-100%), skew(-45deg));
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -o-transform-origin: 0 0;
+            transform-origin: 0 0;
+            width: 150%;
+            z-index: -1;
+        }
+        &:hover,
+        &:focus {
+            color: $orangeColor !important;
+            &::before {
+                @include transvalue(transform, translateX(0), skew(-45deg));
+            }
+        }
+    }
+}
+sup {
+    font-size: 70%;
+    margin-top: -0.5em;
+}
+/*hide last password icon in input*/
+div[id^="__lpform_"] {
+    display: none;
+}

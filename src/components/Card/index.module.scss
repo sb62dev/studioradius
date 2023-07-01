@@ -1,0 +1,86 @@
+@import "../../styles/inc/components";
+
+.cardWrapper {
+    background-color: $white;
+    box-shadow: 0px 0px 1px $transparentBlack1, 0px 4px 8px $transparentBlack2, 0px 8px 48px $lightGrey4;
+    border-radius: 20px;
+    @include media-breakpoint-down(md) {
+        border-radius: 15px;
+    }
+    .cardImg {
+        overflow: hidden;
+        border-radius: 16px 16px 0 0;
+        a {
+            &:hover {
+                img {
+                    @include transvalue(transform, scale(1.1));
+                }
+            }
+        }
+        img {
+            width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            display: block;
+            height: 212px;
+            border-radius: 16px 16px 0 0;
+            @include transvalue(transition, all 300ms ease-in-out 0s);
+            @include media-breakpoint-down(lg) {
+                height: 170px;
+            }
+            @include media-breakpoint-down(md) {
+                height: 208px;
+            }
+        }
+    }
+    .cardContent {
+        padding: 20px;
+        text-align: center;
+        @include media-breakpoint-down(md) {
+            padding: 20px 15px;
+        }
+        .cardTitle {
+            h2 {
+                margin-bottom: 16px;
+                border-bottom: 1px solid $lightGrey;
+                padding-bottom: 16px;
+                font-size: inherit !important;
+                line-height: inherit !important;
+                a {
+                    font-size: 18px;
+                    line-height: 1.5;
+                    font-family: $avenirbold;
+                    @include media-breakpoint-between(md, lg) {
+                        font-size: 16px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .cardDes {
+            position: relative;
+            p {
+                line-height: 1.62;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                background: $lightGrey;
+                width: 1px;
+                height: 100%;
+                @include transvalue(transform, translateX(-50%));
+            }
+            span {
+                font-weight: 600;
+                display: block;
+                color: $black;
+                @include media-breakpoint-down(md) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
