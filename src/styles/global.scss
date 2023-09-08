@@ -1,6 +1,5 @@
 @import "../styles/inc/components";
-@import "inc/theme";
-@import "inc/themeSobeys";
+@import "inc/theme"; 
 
 html, body {
     margin: 0;
@@ -35,8 +34,7 @@ a {
     text-decoration: none;
     &:hover,
     &:active,
-    &:focus {
-        color: $black;
+    &:focus { 
         text-decoration: underline;
     }
 }
@@ -49,17 +47,8 @@ h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4 {
-    font-family: $avenirbold;
-    color: $black;
-}
-h1 span,
-h2 span,
-h3 span,
-h4 span,
-h5 span,
-h6 span {
-    color: $black;
-}
+    font-family: $avenirbold; 
+} 
 h1, .h1 {
     font-size: 64px;
     line-height: 1.15;
@@ -145,10 +134,7 @@ h6, .h6 {
 img {
     max-width: 100%;
     height: auto;
-}
-li {
-    color: $darkGrey;
-}
+} 
 section {
     max-width: 1920px;
     margin-left: auto;

@@ -10,14 +10,11 @@ interface Props {
 	projectDetails?: any;  
 }
 export const SingleRecipe: React.FC<Props> = (props: Props) => {
-    const projectDetails = props?.projectDetails?.fields;
+    const projectDetails = props?.projectDetails?.fields; 
     console.log(projectDetails);
     const title = projectDetails?.title;
-    const description = projectDetails?.content_desc;
-    const media1Column1 = projectDetails?.media1Column1;
-    const media1Column2 = projectDetails?.media1Column2;
-    const media1Column3 = projectDetails?.media1Column3;
-    const media2Columns1 = projectDetails?.media2Columns1;
+    const description = projectDetails?.content_desc;  
+    const imgSection = projectDetails?.selectImage;
     return (
         <>
             <section className={`sectionSpace ${Style.projectsSection}`}>
@@ -31,36 +28,29 @@ export const SingleRecipe: React.FC<Props> = (props: Props) => {
                         <div className={Style.description}>
                             {description}
                         </div> 
-                    )} 
-                    <div className={Style.projectImages}>
-                        {media1Column1?.length > 0 && (
-                            <div className={Style.projectImageCol1}>
-                                {media1Column1?.map((item,itemKey) => (
-                                    <div key={itemKey}>
-                                        <ImageConverter src={item?.fields?.file?.url} alt={item?.fields?.file?.titile || "Image"} width={1200} height={650} /> 
-                                    </div>
-                                ))}
-                            </div>
-                        )} 
-                        {media1Column2?.length > 0 && (
-                            <div className={Style.projectImageCol1}>
-                                {media1Column2?.map((item,itemKey) => (
-                                    <div key={itemKey}>
-                                        <ImageConverter src={item?.fields?.file?.url} alt={item?.fields?.file?.titile || "Image"} width={1200} height={650} /> 
-                                    </div>
-                                ))}
-                            </div>
-                        )} 
-                        {media1Column3?.length > 0 && (
-                            <div className={Style.projectImageCol1}>
-                                {media1Column3?.map((item,itemKey) => (
-                                    <div key={itemKey}>
-                                        <ImageConverter src={item?.fields?.file?.url} alt={item?.fields?.file?.titile || "Image"} width={1200} height={650} /> 
-                                    </div>
-                                ))}
-                            </div>
-                        )} 
+                    )}  
+
+                    {imgSection?.length > 0 && imgSection?.map((item, itemkey) => (
+                    <div key={itemkey} className={Style.projectImages}>
+                        <div className={`rowFlex`}>
+                            {Array.isArray(item?.fields?.images) && item?.fields?.images.length > 0 && (
+                                <>
+                                    {item?.fields?.images.slice(0, item?.fields?.numberOfColumns).map((imgItem, imgItemKey) => (
+                                        <div key={imgItemKey} className={`columnMd${12 / item?.fields?.numberOfColumns}`}>
+                                            <ImageConverter
+                                                src={imgItem?.fields?.file?.url}
+                                                alt={imgItem?.fields?.title || "Image"}
+                                                width={1200}
+                                                height={650}
+                                            />
+                                        </div>
+                                    ))} 
+                                </>
+                            )}
+                        </div>
                     </div>
+                    ))} 
+
 				</div>
 			</section> 
 		</> 

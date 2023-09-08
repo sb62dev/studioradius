@@ -2,7 +2,6 @@
 
 .cardWrapper {
     background-color: $white;
-    box-shadow: 0px 0px 1px $transparentBlack1, 0px 4px 8px $transparentBlack2, 0px 8px 48px $lightGrey4;
     border-radius: 20px;
     @include media-breakpoint-down(md) {
         border-radius: 15px;
@@ -46,6 +45,7 @@
                 padding-bottom: 16px;
                 font-size: inherit !important;
                 line-height: inherit !important;
+                color: $black;
                 a {
                     font-size: 18px;
                     line-height: 1.5;
@@ -59,8 +59,9 @@
                 }
             }
         }
-        .cardDes {
+        .cardDesc {
             position: relative;
+            color: $black;
             p {
                 line-height: 1.62;
             }

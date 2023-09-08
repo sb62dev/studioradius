@@ -10,8 +10,7 @@ interface Props {
 }
 
 const ProductData: React.FC<Props> = (props: Props) => {  
-	const projectData = props?.projectData; 
-	console.log(projectData); 
+	const projectData = props?.projectData;  
 	return (
 		<> 
 			<section className={`sectionSpace ${Style.productsSection}`}>

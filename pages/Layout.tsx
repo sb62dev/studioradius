@@ -16,32 +16,21 @@ interface Props {
  
 const Layout: React.FC<Props> = (props: Props) => {   
     const children = props?.children;
-    const headerFtrData = props?.headerFtrData?.[0]?.fields;   
+    const headerFtrData = props?.headerFtrData?.[0]?.fields;    
     const seoData = props?.pageData?.data?.create_block_seometa?.[0];  
     const favIcon = headerFtrData?.favIcon?.url || "/images/favicon.png";
     const favIconUrl = useRemoveDomain(favIcon); 
-    const metaTitle= seoData?.metaTitle || "Ready for you";
+    const metaTitle= seoData?.metaTitle || "Studio Radius";
     const metaDescription= seoData?.metaDescription;
     const headerVariantOptions = headerFtrData?.transparentHeaderOptions || "/"; 
     const router = useRouter();
     const headerVariant = headerVariantOptions.includes(router.pathname) ? 'Transparent' : 'White';  
     const text = "Skip to main content";  
-    const gtmkey = headerFtrData?.gtmKey;
-
-    useEffect(() => {
-        const body = document.querySelector('body');
-        if (body) {
-            if (headerVariant === 'White') {
-              body.classList.add('whitebody');
-            } else {
-              body.classList.remove('whitebody');
-            }
-        }
-    }, [headerVariant]);
+    const gtmkey = headerFtrData?.gtmKey; 
  
     const headerPropsList = { 
         menuItems: headerFtrData?.menu,  
-        desktopLogo: headerFtrData?.desktopLogo,  
+        logo: headerFtrData?.headerLogo,  
         link: headerFtrData?.logourl || "/", 
     };
     
@@ -77,7 +66,7 @@ const Layout: React.FC<Props> = (props: Props) => {
             </Head> 
             <main>
                 <Link className="skip-main sr-only" href="#mainSection">{text}</Link>
-                <Header {...headerPropsList} varient={headerVariant} />
+                <Header {...headerPropsList} />
                 <div id="mainSection">{children}</div>
                 <Footer {...footerPropsList} /> 
             </main>

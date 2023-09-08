@@ -32,18 +32,18 @@ export const Footer: React.FC<Props> = (props: Props) => {
                 {logoSrc &&
                     <div className={Style.footerLogo}>
                         <Link href={logoLink} aria-label={logoAriaLabel} >
-                            <ImageConverter src={logoSrc} alt={logoAlt} height={120} width={120} />
+                            <ImageConverter src={logoSrc} alt={logoAlt} height={120} width={200} />
                         </Link>
                     </div>
                 }
                 <div className={Style.footerContent}>
                     <div className={`rowFlex alignItemsCenter`}>
                         {ftrDesc &&
-                            <div className={`columnMdAuto`}>
+                            <div className={`columnMd5`}>
                                 <div className={Style.copyrightText}>{ftrDesc}</div>
                             </div>
                         }
-                        <div className={`columnMd`}>
+                        <div className={`columnMd4`}>
                             {mergedFtrMenuList?.length > 0 &&
                                 <div className={Style.footerNav}>
                                         <ul>
@@ -56,7 +56,7 @@ export const Footer: React.FC<Props> = (props: Props) => {
                                 </div>
                             }
                         </div>
-                        <div className={`columnMdAuto`}>
+                        <div className={`columnMd3`}>
                             {footerAddressMenu  &&
                                 <div className={Style.ftrcntInfo} dangerouslySetInnerHTML={{ __html: footerAddressMenu }} />
                             }

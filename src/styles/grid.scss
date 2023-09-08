@@ -1,10 +1,10 @@
 @import "./../styles/inc/components"; 
 
 .container_outter {
-    width: 100%;
-    max-width: 1920px;
-    padding-right: 48px;
-    padding-left: 48px;
+    width: 100%; 
+    max-width: 1440px;
+    padding-right: 50px;
+    padding-left: 50px;
     margin-right: auto;
     margin-left: auto;
     @include media-breakpoint-down(lg) {

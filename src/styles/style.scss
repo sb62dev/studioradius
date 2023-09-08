@@ -7,11 +7,12 @@
 }
 body {
     margin: 0;
-    font-size: 1rem;
+    font-size: 15px;
     font-family: var(--body-font);
-    line-height: var(--body-line-height);
-    color: var(--dark-grey);
+    line-height: 1.4;
+    color: $white;
     text-align: left;
+    background: $black;
     &.hidden {
         @include media-breakpoint-down(md) {
             overflow: hidden;
