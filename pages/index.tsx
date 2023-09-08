@@ -4,9 +4,7 @@ import { apiFetch } from "@api/apiFetch";
 import { varProjects, varHeaderftr } from "@api/variables";
 
 interface Props {
-    headerFtrData?: any; 
-    projectData?: any; 
-    projects?: any;
+    headerFtrData?: any;  
 }
 
 const Home: React.FC<Props> = (props: Props) => {  
@@ -20,11 +18,10 @@ const Home: React.FC<Props> = (props: Props) => {
 export default Home;
 
 export async function getStaticProps() {
-    const [headerFtrData, projectData] = await Promise.all([ apiFetch(varHeaderftr), apiFetch(varProjects) ]);
+    const [headerFtrData] = await Promise.all([ apiFetch(varHeaderftr)]);
     return {
         props: { 
-            headerFtrData,
-            projectData,
+            headerFtrData, 
         },
         revalidate: 10,
     };

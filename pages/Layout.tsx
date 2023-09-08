@@ -16,8 +16,7 @@ interface Props {
  
 const Layout: React.FC<Props> = (props: Props) => {   
     const children = props?.children;
-    const headerFtrData = props?.headerFtrData?.[0]?.fields;  
-    console.log(headerFtrData);
+    const headerFtrData = props?.headerFtrData?.[0]?.fields;   
     const seoData = props?.pageData?.data?.create_block_seometa?.[0];  
     const favIcon = headerFtrData?.favIcon?.url || "/images/favicon.png";
     const favIconUrl = useRemoveDomain(favIcon); 
