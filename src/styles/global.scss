@@ -4,20 +4,17 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: $Avenir;
+    font-family: $graphik-regu;
     counter-reset: listNumber;
     overflow-x: hidden;
     &.hidden {
         overflow: hidden;
-    }
-    @include media-breakpoint-between(md, lg) {
-        font-size: 14px;
-    }
+    } 
 }
 p {
     margin-bottom: 0;
     margin-top: 0;
-    font-family: $Avenir;
+    font-family: $graphik-regu;
     color: $darkGrey;
     font-size: 16px;
 }
@@ -25,12 +22,12 @@ span {
     color: $darkGrey;
 }
 strong, b {
-    font-family: $avenirbold;
+    font-family: $recife-bold;
 }
 a {
     color: inherit;
     cursor: pointer;
-    font-family: $Avenir;
+    font-family: $graphik-regu;
     text-decoration: none;
     &:hover,
     &:active,
@@ -47,7 +44,7 @@ h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4 {
-    font-family: $avenirbold; 
+    font-family: $recife-bold; 
 } 
 h1, .h1 {
     font-size: 64px;
@@ -354,3 +351,17 @@ input[type="search"]::-webkit-search-results-decoration {
 .slick-arrow.slick-hidden {
     display: none;
 } 
+.projectRowFlex {
+    @include media-breakpoint-up(md) {  
+        .columnMd5 {
+            -ms-flex: 0 0 42.8%;
+            flex: 0 0 42.8%;
+            max-width: 42.8%;
+        }
+        .columnMd7 {
+            -ms-flex: 0 0 57.2%;
+            flex: 0 0 57.2%;
+            max-width: 57.2%;
+        }
+    } 
+}  

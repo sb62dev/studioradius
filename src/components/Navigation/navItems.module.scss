@@ -27,8 +27,7 @@ li.menuItem {
         font-size: 16px;
         line-height: 1.6;
         text-transform: capitalize;
-        color: $white;
-        font-family: $avenirsemibold;
+        color: $white;  
         display: block;
         &::before {
             content: '';
@@ -53,7 +52,7 @@ li.menuItem {
             color: $black;
             font-size: 22px;
             line-height: 1.45;
-            font-family: $avenirbold;
+            font-family: $recife-bold;
         }
         @include media-breakpoint-down(xs) {
             font-size: 18px;

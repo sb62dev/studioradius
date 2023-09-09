@@ -7,7 +7,7 @@ const ImageConverter = dynamic(() => import('@components/ImageConverter'));
 interface Props {
     ftrLogoProps?: any,
     ftrDesc?: string, 
-    footerMenus?: any,
+    menuItems?: any,
     footerAddressMenu?: any
 }
 
@@ -18,13 +18,13 @@ export const Footer: React.FC<Props> = (props: Props) => {
     const logoAlt = ftrLogoProps?.title || "Footer Logo";
     const logoLink = "/";
     const ftrDesc = props?.ftrDesc;
-    const footerMenuTitle = props?.footerMenus?.footerMenuTitle;
-    const footerMenuLinks = props?.footerMenus?.footerMenuLinks;
-    const mergedFtrMenuList = footerMenuLinks?.map((link, index) => ({
-        link,
-        title: footerMenuTitle[index]
-    })); 
     const footerAddressMenu = props?.footerAddressMenu;
+    const menuTitle = props?.menuItems?.headerMenuTitle;
+    const menuLinks = props?.menuItems?.headerMenuLinks;
+    const mergedMenuList = menuLinks?.map((url, index) => ({
+        url,
+        title: menuTitle[index]
+    }));  
 
     return (
         <footer className={Style.footerWrapper}>
@@ -44,10 +44,10 @@ export const Footer: React.FC<Props> = (props: Props) => {
                             </div>
                         }
                         <div className={`columnMd4`}>
-                            {mergedFtrMenuList?.length > 0 &&
+                            {mergedMenuList?.length > 0 &&
                                 <div className={Style.footerNav}>
                                         <ul>
-                                            {mergedFtrMenuList?.map((item, itemKey) => (
+                                            {mergedMenuList?.map((item, itemKey) => (
                                                 <li key={itemKey}>
                                                     <Link href={item?.link || "#!"} aria-label={"Click here to open " + item?.title}>{item?.title}</Link>
                                                 </li>

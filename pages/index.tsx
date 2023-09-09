@@ -10,7 +10,11 @@ interface Props {
 const Home: React.FC<Props> = (props: Props) => {  
     return (
         <>
-            <h1> Homepage </h1>
+            <section className={`sectionSpace ${Style.homeSection}`}>
+				<div className={`container_outter`}>
+                     <h1> Homepage </h1>
+                </div>
+            </section> 
         </>
     );
 };

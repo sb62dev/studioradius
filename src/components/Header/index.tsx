@@ -18,11 +18,19 @@ export const Header: React.FC<Props> = (props: Props) => {
     const logoAriaLabel = "Click here to go to homepage";
     const logoAlt = logo?.title || "Header Logo";
     const logoLink = "/";
+    console.log(props?.menuItems);
+    const menuTitle = props?.menuItems?.headerMenuTitle;
+    const menuLinks = props?.menuItems?.headerMenuLinks;
+    const mergedMenuList = menuLinks?.map((url, index) => ({
+        url,
+        title: menuTitle[index]
+    }));  
+
     const NavigationProps = {
         breakPoint: 766.99, 
         openMenuArialabel: "Click here to open menu", 
         closeMenuArialabel: "Click here to close menu", 
-        menuData: props?.menuItems 
+        menuData: mergedMenuList 
     } 
  
     const id = props?.id;   
@@ -48,7 +56,7 @@ export const Header: React.FC<Props> = (props: Props) => {
                         <div className={`columnMd columnAuto ${Style.mobMenu}`}>
                             {NavigationProps &&
                                 <Navigation {...NavigationProps}/>
-                            }
+                            } 
                         </div> 
                     </div>
                 </div>

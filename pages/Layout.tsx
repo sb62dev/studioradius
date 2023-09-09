@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Head from 'next/head';
 import { useRouter } from 'next/router'; 
 import Header from '@components/Header';
@@ -21,15 +21,12 @@ const Layout: React.FC<Props> = (props: Props) => {
     const favIcon = headerFtrData?.favIcon?.url || "/images/favicon.png";
     const favIconUrl = useRemoveDomain(favIcon); 
     const metaTitle= seoData?.metaTitle || "Studio Radius";
-    const metaDescription= seoData?.metaDescription;
-    const headerVariantOptions = headerFtrData?.transparentHeaderOptions || "/"; 
-    const router = useRouter();
-    const headerVariant = headerVariantOptions.includes(router.pathname) ? 'Transparent' : 'White';  
+    const metaDescription= seoData?.metaDescription;  
     const text = "Skip to main content";  
     const gtmkey = headerFtrData?.gtmKey; 
  
     const headerPropsList = { 
-        menuItems: headerFtrData?.menu,  
+        menuItems: headerFtrData,  
         logo: headerFtrData?.headerLogo,  
         link: headerFtrData?.logourl || "/", 
     };
@@ -37,7 +34,7 @@ const Layout: React.FC<Props> = (props: Props) => {
     const footerPropsList = { 
         ftrLogoProps: headerFtrData?.footerLogo,
         ftrDesc: headerFtrData?.footerDescription, 
-        footerMenus: headerFtrData,
+        menuItems: headerFtrData,
         footerAddressMenu: headerFtrData?.footerAddressMenu
     }; 
 

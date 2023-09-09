@@ -3,18 +3,18 @@
     //Global Color
     --theme-primary: #025436;
     --theme-white: #fff;
-    --heading-font: 'avenir-semibold', sans-serif;
-    --body-font: 'avenir-regular', sans-serif;
+    --heading-font: 'RecifeDisplay-Bold', sans-serif;
+    --body-font: 'Graphik-Regular', sans-serif;
     --dark-grey: $darkGrey;
-    --body-line-height: 1.6rem;
+    --body-line-height: 1.4rem;
     
 
     //Top header bar start
     --top-header-bg: #F4F4F4;
-    --top-nav-font-family: 'avenir-regular', sans-serif;
+    --top-nav-font-family: 'Graphik-Regular', sans-serif;
     --top-nav-font-size: 14px;
 
-    --top-nav-lang-font-family:'avenir-regular', sans-serif;
+    --top-nav-lang-font-family:'Graphik-Regular', sans-serif;
     --top-nav-lang-font-size: 16px;
     --top-nav-lang-active-bg: $darkGrey;
     --top-nav-lang-active-color: #fff;
@@ -103,7 +103,7 @@
 
     //Footer
     --footer-bg: #025436;
-    --footer-heading-font-family: 'avenir-regular', sans-serif;
+    --footer-heading-font-family: 'Graphik-Regular', sans-serif;
     --footer-heading-font-size: 18px;
     --footer-heading-line-height: 22px;
     --footer-heading-color:#fff;
@@ -135,7 +135,7 @@
     --footer-menu-font-size: 14px;
     }
 
-    --footer-copyRight-fontFamily: 'avenir-regular', sans-serif;
+    --footer-copyRight-fontFamily: 'Graphik-Regular', sans-serif;
     --footer-copyRight-color: #fff;
     --footer-copyRight-fontSize: 16px;
 
@@ -160,5 +160,5 @@
       @include media-breakpoint-down(xs) {
       --footer-bottomLinks-font-size: 13px;
       }
-      --footer-bottomLinks-fontFamily: 'avenir-regular', sans-serif;
+      --footer-bottomLinks-fontFamily: 'Graphik-Regular', sans-serif;
 }

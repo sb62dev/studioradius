@@ -1,0 +1,39 @@
+@import '../styles/inc/components';
+ 
+.projectsSection{
+    padding-top: 45px;
+    .projectHead {
+        margin-bottom: 60px;
+    }
+    .maintitle{
+        padding-bottom: 45px;
+        margin-bottom: 45px;
+        border-bottom: 1px solid $lightGrey3;
+    }
+    .desc {
+        margin-bottom: 25px;
+    }
+    .mainDesc {
+        @include media-breakpoint-up(xl) {
+            max-width: 60%;
+        } 
+    }
+    .projectImages{
+        .projectImgHead {
+            margin-top: 35px;
+            margin-bottom: 15px;
+            .title {
+                h2 {
+                    margin-bottom: 10px;
+                } 
+            }
+        }
+        .projectRow{
+            padding: 15px 0; 
+        }
+        .projectImg {
+            text-align: center;
+            
+        }
+    } 
+}

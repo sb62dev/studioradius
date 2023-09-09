@@ -16,10 +16,8 @@ $breakpoints: map-merge(
     )
 );
 // Fonts
-$Avenir: 'avenir-regular', sans-serif;
-$avenirmedium: 'avenir-medium', sans-serif;
-$avenirsemibold: 'avenir-semibold', sans-serif;
-$avenirbold: 'avenir-bold', sans-serif;
+$graphik-regu: 'Graphik-Regular', sans-serif;
+$recife-bold: 'RecifeDisplay-Bold', sans-serif; 
 $fontello: 'fontello', sans-serif;
 // Colors
 $offWhite: #f4f4f4;
@@ -31,7 +29,7 @@ $lightGrey: #dddddd;
 $black: #000000;
 $lightGrey1: #D6D6D6;
 $lightGrey2: #FCFCFC;
-$lightGrey3: #d7d2c8;
+$lightGrey3: #cfcfcf;
 $lightGrey4: #EEEEEE;
 $transparentBlack1: rgba(66, 71, 76, 0.32);
 $transparentBlack2: rgba(66, 71, 76, 0.06);
