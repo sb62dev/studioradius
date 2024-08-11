@@ -1,0 +1,39 @@
+@import '../../styles/inc/components';
+
+.breadcrumbWrapper {
+    ul {
+        &.breadcrumbNav {
+            padding-left: 0;
+            margin-bottom: 16px;
+            li {
+                display: inline-block;
+                position: relative;
+                margin-bottom: 0;
+                border: none;
+                margin-left: 0 !important;
+                padding: 0;
+                margin-right: 25px;
+                &:before {
+                    content: '/';
+                    position: absolute;
+                    right: -10px;
+                    top: 50%;
+                    @include transvalue(transform, translateY(-50%));
+                }
+                a {
+                    padding-bottom: 0;
+                    border: none;
+                    font-family: $graphik-regu;
+                    font-size: 16px;
+                    span {
+                        margin-bottom: 0;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+}

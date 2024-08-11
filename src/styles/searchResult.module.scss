@@ -1,0 +1,60 @@
+@import "./../styles/inc/components";
+
+.searchResultsPage {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $lightGrey;
+    .breadCrumbs {
+        padding-top: 10px;
+    }
+}
+.resultListWrapper {
+    .resultCol {
+        margin-bottom: 30px;
+        .imgCol {
+            img {
+                -o-object-fit: cover;
+                object-fit: cover;
+                width: 182px;
+                height: 182px;
+                display: block;
+                @include media-breakpoint-down(lgmd) {
+                    height: 150px;
+                    width: 150px;
+                }
+                @include media-breakpoint-down(md) {
+                    height: 120px;
+                    width: 120px;
+                }
+                @include media-breakpoint-down(sm) {
+                    height: 100px;
+                    width: 100px;
+                }
+                @include media-breakpoint-down(xxs) {
+                    height: 90px;
+                    width: 90px;
+                }
+            }
+        }
+        .contentCol {
+            h2 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+.noDataFound {
+    text-align: center;
+    span {
+        display: block;
+        &.searchCrossIcon {
+            color: $orangeColor;
+            font-size: 45px;
+            padding-bottom: 30px;
+            @include media-breakpoint-down(xs) {
+                font-size: 40px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

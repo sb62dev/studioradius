@@ -1,0 +1,59 @@
+@import '../../styles/inc/components';
+
+.footerWrapper {
+    padding: 60px 0 40px; 
+    color: $white;
+    @include media-breakpoint-down(md) {
+        padding: 40px 0;
+    }
+    .footerLogo {
+        text-align: left; 
+        padding-bottom: 20px;  
+        a {
+            display: inline-block;
+            color: $black;
+            img {
+                display: block;
+                @include media-breakpoint-down(xxs) {
+                    max-width: 170px;
+                }
+            }
+        }
+    }
+    .footerContent {
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+        .footerNav {
+            text-align: center;
+            @include media-breakpoint-down(md) {
+                max-width: 326px;
+                margin: 0 auto;
+            }
+            ul {
+                li {
+                    display: block;
+                    position: relative;
+                    margin-bottom: 15px; 
+                    text-transform: uppercase;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .copyrightText { 
+            position: relative;
+        } 
+        .ftrcntInfo {
+            li {
+                list-style: none;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

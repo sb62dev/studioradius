@@ -1,0 +1,88 @@
+@import "../../styles/inc/components";
+
+.btn {
+    background-color: $orangeColor;
+    cursor: pointer;
+    border: 2px solid $orangeColor;
+    border-radius: 100px;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    float: none;
+    margin: 0;
+    padding: 13px 30px;
+    text-align: center;
+    box-shadow: none;
+    outline: 0;
+    text-transform: capitalize; 
+    color: $black;
+    font-size: 16px;
+    &::before {
+        background: $white;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        @include transvalue(transform, translateX(-100%) skew(-45deg));
+        @include transvalue(transform-origin, 0 0);
+        width: 150%;
+        z-index: -1;
+        @include transvalue(transition, transform 1s cubic-bezier(0.07, 0.51, 0.12, 1));
+    }
+    span {
+        color: $black;
+        margin-bottom: 0 !important;
+    }
+    &:hover,
+    &:focus {
+        color: $orangeColor;
+        text-decoration: none;
+        &::before {
+            @include transvalue(transform, translateX(0) skew(-45deg));
+        }
+        span {
+            color: $black;
+        }
+    }
+    &.witharrow {
+        display: inline-flex;
+        align-items: center;
+        padding-left: 60px;
+        @include transvalue(transition, all 0.3s);
+        &::after {
+            position: absolute;
+            content: "\e800";
+            color: $black;
+            font-size: 20px;
+            font-family: $fontello;
+            left: 30px;
+            top: 50%;
+            @include transvalue(transform, translateY(-50%));
+            @include transvalue(transition, all 0.3s);
+        }
+        &:hover, &:focus {
+            color: $orangeColor;
+            text-decoration: none;
+            &:after {
+                color: $black;
+            }
+        }
+    }
+    &.darkBtn {
+        background-color: $white;
+        border: 2px solid $black;
+        color: $black;
+        &::before {
+            background-color: $black;
+        }
+        &:hover,
+        &:focus {
+            span {
+                color: $white;
+            }
+        }
+    }
+}

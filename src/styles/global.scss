@@ -1,0 +1,367 @@
+@import "../styles/inc/components";
+@import "inc/theme"; 
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: $graphik-regu;
+    counter-reset: listNumber;
+    overflow-x: hidden;
+    &.hidden {
+        overflow: hidden;
+    } 
+}
+p {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: $graphik-regu;
+    color: $darkGrey;
+    font-size: 16px;
+}
+span {
+    color: $darkGrey;
+}
+strong, b {
+    font-family: $recife-bold;
+}
+a {
+    color: inherit;
+    cursor: pointer;
+    font-family: $graphik-regu;
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus { 
+        text-decoration: underline;
+    }
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+    font-family: $recife-bold; 
+} 
+h1, .h1 {
+    font-size: 64px;
+    line-height: 1.15;
+    margin: 0 0 24px;
+    @include media-breakpoint-down(lgmd) {
+        font-size: 54px;
+    }
+    @include media-breakpoint-down(md) {
+        font-size: 36px;
+        line-height: 1.27;
+    }
+    @include media-breakpoint-down(xs) {
+        font-size: 30px;
+    }
+}
+h2, .h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 0 0 24px;
+    @include media-breakpoint-down(lgmd) {
+        font-size: 38px;
+    }
+    @include media-breakpoint-down(md) {
+        font-size: 36px;
+        line-height: 1.27;
+    }
+    @include media-breakpoint-down(xs) {
+        font-size: 30px;
+    }
+    @include media-breakpoint-down(xxs) {
+        font-size: 28px;
+    }
+}
+h3, .h3 {
+    font-size: 36px;
+    line-height: 1.4;
+    margin: 0 0 24px;
+    @include media-breakpoint-between(md, lg) {
+        font-size: 30px;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 28px;
+    }
+    @include media-breakpoint-down(xxs) {
+        font-size: 24px;
+    }
+}
+h4, .h4 {
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 0 0 24px;
+    @include media-breakpoint-between(md, lg) {
+        font-size: 20px;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 20px;
+    }
+}
+h5, .h5 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 20px;
+}
+h6, .h6 {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 20px;
+}
+.mt50 {
+    margin-top: 50px;
+}
+.mobilepadd0 {
+    @include media-breakpoint-down(md) {
+        padding: 0px !important;
+    }
+}
+.listNone {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+img {
+    max-width: 100%;
+    height: auto;
+} 
+section {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sectionSpace {
+    padding: 100px 0;
+    @include media-breakpoint-down(lg) {
+        padding: 70px 0;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 40px 0;
+    }
+}
+.sectionSpace2 {
+    padding: 100px 0;
+    @include media-breakpoint-down(lg) {
+        padding: 70px 0;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 48px 0;
+    }
+}
+body {
+    &.whitebody {
+        padding-top: 100px;
+        @include media-breakpoint-down(md) {
+            padding-top: 0;
+        }
+    } 
+}
+.headerFixed {
+    .headerMenuIcon {
+        &:before {
+            color: $orangeColor;
+        }
+    }
+}
+.textBreakMob {
+    @include media-breakpoint-down(md) {
+        display: block;
+    }
+}
+.textBreak {
+    display: block;
+    @include media-breakpoint-down(md) {
+        display: inline;
+    }
+}
+.hide-scroll {
+    overflow: hidden;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+@media print {
+    header,
+    footer {
+        display: none;
+    }
+    @page {
+        size: Landscape;
+        margin: 0;
+    }
+    .no-print {
+        display: none;
+    }
+    .print-only {
+        display: block !important;
+    }
+    .print-hide {
+        visibility: hidden;
+    }
+    .shareBtn {
+        display: none !important;
+    }
+}
+.mobSlidePadWrap  {
+    .mobSlidePad {
+        @include media-breakpoint-down(xl) {
+            padding: 0 8px 20px;
+            overflow: hidden;
+        }
+    }
+    .slick-list {
+        margin:  0 -8px;
+    }
+}
+/******** Slick Slider *********/
+.slick-slider {
+    position: relative;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    .slick-dots {
+        bottom: 7px;
+        line-height: 0;
+        position: absolute;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+        li {
+            position: relative;
+            display: inline-block;
+            padding: 0;
+            cursor: pointer;
+            width: 12px;
+            height: 12px;
+            margin: 0 8px;
+            button {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                padding: 0;
+                cursor: pointer;
+                font-size: 0;
+                line-height: 0;
+                display: block;
+                border: 0;
+                outline: none;
+                background-color: $black ;
+            }
+            &.slick-active {
+                button {
+                    background-color: $orangeColor;
+                }
+            }
+        }
+    }
+} 
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    @include transvalue(transform, translate3d(0, 0, 0));
+    &:focus {
+        outline: none;
+    }
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    @include transvalue(transform, translate3d(0, 0, 0));
+    &:after {
+        clear: both;
+        display: table;
+        content: "";
+    }
+    &:before {
+        display: table;
+        content: "";
+    }
+}
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    outline: none;
+    &.slick-loading img {
+        display: none;
+    }
+    &.dragging img {
+        pointer-events: none;
+    }
+}
+[dir="rtl"] .slick-slide {
+    float: right;
+}
+.slick-initialized .slick-slide {
+    display: block;
+}
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+} 
+.projectRowFlex {
+    @include media-breakpoint-up(md) {  
+        .columnMd5 {
+            -ms-flex: 0 0 42.8%;
+            flex: 0 0 42.8%;
+            max-width: 42.8%;
+        }
+        .columnMd7 {
+            -ms-flex: 0 0 57.2%;
+            flex: 0 0 57.2%;
+            max-width: 57.2%;
+        }
+    } 
+}  

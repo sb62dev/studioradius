@@ -1,0 +1,54 @@
+$breakpoints: () !default;
+
+$breakpoints: map-merge(
+    $breakpoints,
+    (
+        xxs: 374.98px,
+        xs: 413.98px,
+        sm: 479.98px,
+        md: 767.98px,
+        lg: 991.98px,
+        xl: 1199.98px,
+        lgmd: 1299.98px,
+        xxl: 1599.98px,
+        xxxl: 1749.98px,
+        xxxxl: 1850.98px,
+    )
+);
+// Fonts
+$graphik-regu: 'Graphik-Regular', sans-serif;
+$recife-bold: 'RecifeDisplay-Bold', sans-serif; 
+$fontello: 'fontello', sans-serif;
+// Colors
+$offWhite: #f4f4f4;
+$orangeColor: #E4573A;
+$white: #ffffff;
+$darkGrey: #404040;
+$darkGrey1: #808080;
+$lightGrey: #dddddd;
+$black: #000000;
+$lightGrey1: #D6D6D6;
+$lightGrey2: #FCFCFC;
+$lightGrey3: #cfcfcf;
+$lightGrey4: #EEEEEE;
+$transparentBlack1: rgba(66, 71, 76, 0.32);
+$transparentBlack2: rgba(66, 71, 76, 0.06);
+$transparentBlack3: rgba(0, 0, 0, 0.7);
+$transparentBlack4: rgba(0, 0, 0, 0);
+$transparentBlack5: rgba(0, 0, 0, 0.25);
+$transparentBlack6: rgba(0, 0, 0, 0.5);
+$transparentBlack7: rgba(0, 0, 0, 0.2);
+$transparentBlack8: rgba(0, 0, 0, 0.1);
+$transparentBlack9: rgba(0, 0, 0, 0.3);
+$transparent: rgba(255, 255, 255, 0.9);
+$transparentv2: rgba(255, 255, 255, 0.7);
+$transparent1: rgba(228, 87, 58,  0.2);
+$transparent2: rgba(228, 87, 58,  0.5);
+$transparent3: rgba(228, 87, 58,  0.7);
+$fbBgColor:#3b5998;
+$twitterBgColor:#1da1f2;
+$instaBgColor:#c13584;
+$shadowColor: rgba(0, 0, 0, 0.13);
+$redColor: #DD2229;
+$lightRedColor: #F6E9EA;
+$lightRedColor1: #EECDD0;

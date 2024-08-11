@@ -1,0 +1,51 @@
+%button {
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 17px 9px;
+  min-width: 180px;
+  background: transparent;
+  border-radius: 8px;
+  color: $white;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  border: inherit; 
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 1;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    border: solid 2px $orangeColor;
+    display: block;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    border-radius: 8px;
+  }
+  &:after {
+      content: "";
+      background: $orangeColor;
+      width: 150%;
+      height: 100%;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transform: translateX(0%) skew(-45deg);
+      transform-origin: 0 0;
+      transition: transform 1s cubic-bezier(0.07, 0.51, 0.12, 1);
+    }
+  &:hover {
+    color: $orangeColor;
+    &:after {
+      transform: translateX(100%) skew(-45deg);
+      transition: transform 1s cubic-bezier(0.07, 0.51, 0.12, 1);
+    }
+  }  
+  
+}

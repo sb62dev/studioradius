@@ -1,0 +1,45 @@
+@import "./../styles/inc/components";
+.sliderCol {
+    position: relative;
+}
+.cardImg {
+        height: 290px !important;
+        @include media-breakpoint-down(lgmd) {
+            height: 200px !important;
+        }
+        @include media-breakpoint-down(md) {
+            height: 153px;
+        }
+}
+.recentRecSection {
+    padding: 64px 0 34px;
+    @include media-breakpoint-down(md) {
+        padding: 32px 0;
+    }
+    .titleSize {
+        a {
+            font-size: 22px !important;
+            line-height: 1.45 !important;
+            @include media-breakpoint-down(lgmd) {
+                font-size: 20px !important;
+            }
+            @include media-breakpoint-down(md) {
+                font-size: 18px !important;
+                line-height: 1.5 !important;
+            }
+            @include media-breakpoint-down(xs) {
+                font-size: 16px !important;
+            }
+        }
+    }
+}
+.recipeText {
+    font-size: 22px;
+    line-height: 1.46;
+    @include media-breakpoint-between(md, xl) {
+        font-size: 20px;
+    }
+    @include media-breakpoint-down(xs) {
+        font-size: 18px;
+    }
+} 
